@@ -241,7 +241,7 @@ bool mapChange::SlashCommand(int playerID, bz_ApiString command, bz_ApiString /*
     std::unique_ptr<bz_BasePlayerRecord> playerData(bz_getPlayerByIndex(playerID));
 
     // We don't want unregistered folks to be changing maps to disable that
-    if (!playerData->verified || !bz_hasPerm(playerID, mapChangePermission.c_str()))
+    if (!bz_hasPerm(playerID, mapChangePermission.c_str()))
     {
         bz_sendTextMessagef(BZ_SERVER, playerID, "You do not have permission to run the /%s command.", command.c_str());
         return true;
