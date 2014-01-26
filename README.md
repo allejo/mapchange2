@@ -1,3 +1,6 @@
+    Warning: Due to a bug with BZFS, this plugin will only partially work. Until BZFS is fixed, it is recommended you use the
+    original plugin.
+
 Map Change
 =========
 
